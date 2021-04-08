@@ -20,3 +20,10 @@ target_link_libraries(sample2 gtest)
 target_include_directories(sample2 PUBLIC 
                             "${PROJECT_BINARY_DIR}"
                             googletest/include)
+
+add_executable(sample3 src/sample3.cpp)
+target_link_libraries(sample3 gtest)
+# add the binary tree to the search path for include files
+target_include_directories(sample3 PUBLIC 
+                            "${PROJECT_BINARY_DIR}"
+                            googletest/include)
