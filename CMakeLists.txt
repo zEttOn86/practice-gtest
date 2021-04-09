@@ -27,3 +27,11 @@ target_link_libraries(sample3 gtest)
 target_include_directories(sample3 PUBLIC 
                             "${PROJECT_BINARY_DIR}"
                             googletest/include)
+
+add_executable(sample4 src/sample4.cpp)
+target_link_libraries(sample4 gtest gmock)
+# add the binary tree to the search path for include files
+target_include_directories(sample4 PUBLIC 
+                            "${PROJECT_BINARY_DIR}"
+                            googletest/include
+                            googlemock/include)
